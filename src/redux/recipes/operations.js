@@ -1,8 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-axios.defaults.baseURL =
-  'https://https://soyummy-qk5m.onrender.com/api//ingredients/list';
+axios.defaults.baseURL = '/ingredients/list';
 
 export const fetchIngredients = createAsyncThunk(
   'ingredients/fetchAll',

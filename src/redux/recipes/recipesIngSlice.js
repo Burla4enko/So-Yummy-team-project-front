@@ -9,7 +9,7 @@ const initialState = {
   error: null,
 };
 
-const ingredientsSlice = createSlice({
+const recipesIngSlice = createSlice({
   name: 'recipes',
   initialState: initialState,
   extraReducers: {
@@ -27,4 +27,4 @@ const ingredientsSlice = createSlice({
     },
   },
 });
-export const ingredientsReducer = ingredientsSlice.reducer;
+export const recipesReducer = recipesIngSlice.reducer;
