@@ -12,19 +12,17 @@ const initialState = {
 const recipesIngSlice = createSlice({
   name: 'recipes',
   initialState: initialState,
-  extraReducers: {
-    [fetchIngredients.pending](state) {
-      state.isLoading = true;
-    },
-    [fetchIngredients.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      state.ingredients = action.payload;
-    },
-    [fetchIngredients.rejected](state, action) {
-      state.isLoading = false;
-      state.error = action.payload;
-    },
-  },
+  extraReducers: builder =>
+    builder
+      .addCase(fetchIngredients.pending, state => (state.isLoading = true))
+      .addCase(fetchIngredients.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.ingredients = action.payload;
+      })
+      .addCase(fetchIngredients.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      }),
 });
 export const recipesReducer = recipesIngSlice.reducer;

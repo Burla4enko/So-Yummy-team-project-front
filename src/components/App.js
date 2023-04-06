@@ -39,23 +39,22 @@ export default function App() {
       <Toaster />
       <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
         <Routes>
-          <Route index element={<WelcomePage />}>
-            <Route
-              path="/register"
-              element={
-                <RestrictedRoute
-                  redirectTo="/login"
-                  component={<RegistrationPage />}
-                />
-              }
-            />
-            <Route
-              path="/login"
-              element={
-                <RestrictedRoute redirectTo="/" component={<SigninPage />} />
-              }
-            />
-          </Route>
+          <index element={<WelcomePage />} />
+          <Route
+            path="/register"
+            element={
+              <RestrictedRoute
+                redirectTo="/login"
+                component={<RegistrationPage />}
+              />
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute redirectTo="/" component={<SigninPage />} />
+            }
+          />
 
           <Route
             path="/"
