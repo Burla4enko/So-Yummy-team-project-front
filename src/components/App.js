@@ -54,13 +54,13 @@ export default function App() {
         <Routes>
           <Route index component={<WelcomePage />} />
           <Route
-            path="/"
-            element={
-              <SharedLayout
-                toggleTheme={toggleTheme}
-                isDarkTheme={isDarkTheme}
-              />
-            }
+          // path="/"
+          // element={
+          //   <SharedLayout
+          //     toggleTheme={toggleTheme}
+          //     isDarkTheme={isDarkTheme}
+          //   />
+          // }
           >
             <Route
               path="/register"
@@ -79,12 +79,12 @@ export default function App() {
             />
             <Route
               path="categories/:categoryName"
-              element={
-                <PrivateRoute
-                  redirectTo="/login"
-                  component={<CategoriesPage />}
-                />
-              }
+              element={<CategoriesPage />}
+              //   <PrivateRoute
+              //     redirectTo="/login"
+              // component={<CategoriesPage />}
+              //   />
+              // }
             />
             <Route
               path="add"
