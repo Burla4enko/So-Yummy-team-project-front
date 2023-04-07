@@ -6,7 +6,7 @@ import {
   InstagramIcon,
 } from './SocialList.styled';
 
-export const SocialList = () => {
+const SocialList = () => {
   return (
     <List>
       <Link>
@@ -24,3 +24,5 @@ export const SocialList = () => {
     </List>
   );
 };
+
+export default SocialList;
