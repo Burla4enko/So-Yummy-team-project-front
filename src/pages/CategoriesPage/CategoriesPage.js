@@ -1,5 +1,6 @@
 // import {} from './CategoriesPage.styled';
+import { Tabs } from '../../components/Categories/Tabs';
 
 export default function CategoriesPage() {
-  return <div>CategoriesPage</div>;
+  return <Tabs />;
 }
