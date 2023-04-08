@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
+import { Scrollable } from './Scrollable';
 import {
   TabInput,
   TabList,
   TabWrap,
-  CategoriesWrap,
   CategoriesTitle,
   TabLabel,
   Container,
@@ -26,7 +26,7 @@ export const fetchCategories = async () => {
   }
 };
 
-export const CategoryTabs = () => {
+export const Tabs = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -45,18 +45,21 @@ export const CategoryTabs = () => {
   }, []);
 
   return (
-    <CategoriesWrap>
+    <Container>
       <CategoriesTitle>Categories</CategoriesTitle>
+
       <TabWrap>
-        <TabList>
+        <Scrollable>
+          {/* <TabList> */}
           {categories?.map(categorie => (
             <li key={nanoid()}>
               <TabInput type="radio" name="categorie" id={categorie} />
               <TabLabel htmlFor={categorie}>{categorie}</TabLabel>
             </li>
           ))}
-        </TabList>
+          {/* </TabList> */}
+        </Scrollable>
       </TabWrap>
-    </CategoriesWrap>
+    </Container>
   );
 };

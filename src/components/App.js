@@ -54,13 +54,13 @@ export default function App() {
         <Routes>
           <Route index component={<WelcomePage />} />
           <Route
-          // path="/"
-          // element={
-          //   <SharedLayout
-          //     toggleTheme={toggleTheme}
-          //     isDarkTheme={isDarkTheme}
-          //   />
-          // }
+            path="/"
+            element={
+              <SharedLayout
+                toggleTheme={toggleTheme}
+                isDarkTheme={isDarkTheme}
+              />
+            }
           >
             <Route
               path="/register"
