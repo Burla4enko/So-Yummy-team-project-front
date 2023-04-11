@@ -8,6 +8,7 @@ import Loader from '../Loader/Loader';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import toast from 'react-hot-toast';
 import {
   TabList,
   TabWrap,
@@ -37,7 +38,7 @@ export const Categories = () => {
           setCategories(categories.map(category => category));
         }
       } catch (error) {
-        console.log(error.message);
+        toast('Something went wrong...');
       } finally {
         setIsLoading(false);
       }

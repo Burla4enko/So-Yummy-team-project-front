@@ -12,9 +12,15 @@ export const fetchCategories = async () => {
   }
 };
 
-export const fetchRecipesByCategory = async categoryName => {
+export const fetchRecipesByCategory = async (
+  categoryName,
+  limit = 8,
+  page = 1
+) => {
   try {
-    const response = await axios.get(`recipes/categories/${categoryName}`);
+    const response = await axios.get(
+      `recipes/categories/${categoryName}?limit=${limit}&page=${page}`
+    );
     return response.data;
   } catch (e) {
     return e.message;
