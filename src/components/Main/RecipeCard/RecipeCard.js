@@ -11,7 +11,7 @@ export const RecipeCard = ({ recipe }) => {
           src={recipe.thumb}
           alt={recipe.title}
           width="343"
-          loading="lazy"
+          // loading="lazy"
         />
         <TitleWrap>
           <p>{recipe.title}</p>
