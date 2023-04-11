@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import { fetchRecipesByCategory } from '../../services/api/httpRequests';
 import { RecipeCard } from '../../components/Main/RecipeCard/RecipeCard';
 import Loader from '../Loader/Loader';
-import useWindowDimensions from 'hooks/useWindowDimensions';
+
 import { List } from './RecipesByCategoryName.styled.js';
 
 export const RecipesbyCategoryName = () => {
@@ -11,7 +11,6 @@ export const RecipesbyCategoryName = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [recipes, setRecipes] = useState([]);
   const [error, setError] = useState(null);
-  const { width } = useWindowDimensions();
 
   useEffect(() => {
     const getRecipes = async () => {
@@ -35,7 +34,7 @@ export const RecipesbyCategoryName = () => {
       {recipes.length > 0 && !error && !isLoading && (
         <List>
           {recipes.map(recipe => {
-            console.log(recipe.preview);
+            console.log(recipe._id);
             return (
               <RecipeCard
                 recipe={(recipe.preview, recipe.title, recipe._id)}

@@ -17,10 +17,9 @@ import {
   Tab,
   CategoryBtn,
   UnderLine,
-  RecipesWrap,
 } from './Categories.styled';
 
-export const Categories = () => {
+export const Categories = ({ title }) => {
   const [categories, setCategories] = useState([]);
   const [isActive, setIsActive] = useState(false);
   const [_, setValue] = useState(categories[0]);
@@ -102,9 +101,8 @@ export const Categories = () => {
           </TabList>
         </TabWrap>
       </CategoriesWrap>
-      <RecipesWrap>
-        <RecipesbyCategoryName />
-      </RecipesWrap>
+
+      <RecipesbyCategoryName />
     </>
   );
 };

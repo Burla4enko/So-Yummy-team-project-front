@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { RecipeCard } from 'components/Main/RecipeCard/RecipeCard';
 
 export const List = styled.ul`
   display: flex;
@@ -18,12 +17,4 @@ export const List = styled.ul`
   @media screen and (min-width: 1440px) {
     gap: 100px 14px;
   } ;
-`;
-
-export const CardThumb = styled(RecipeCard)`
-  @media screen and (max-width: 768px) {
-    width: calc(100% / 2-28px);
-    margin-left: auto;
-    margin-right: auto;
-  }
 `;

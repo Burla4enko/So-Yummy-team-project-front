@@ -6,7 +6,7 @@ export const CategoriesWrap = styled.div`
     padding-left: 32px;
   }
   @media screen and (min-width: 1440px) {
-    padding: 0px 100px 0px 100px;
+    padding-left: 0px;
   }
 `;
 
@@ -24,7 +24,7 @@ export const TabWrap = styled.div`
   border-bottom: 1px solid #e0e0e0;
 
   @media screen and (min-width: 1440px) {
-    max-width: 1440px;
+    padding-left: 19px;
     margin-top: 100px;
   }
 `;
@@ -91,6 +91,6 @@ export const UnderLine = styled.span`
   background-color: ${props => props.underlined};
 `;
 
-export const RecipesWrap = styled.div`
-  padding: 0 16px;
-`;
+// export const RecipesWrap = styled.div`
+//   padding: 0 16px;
+// `;
